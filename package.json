@@ -1,0 +1,65 @@
+{
+    "name": "google-sheets-parser",
+    "version": "1.0.0",
+    "description": "Parses a Google sheet and returns data as a JavaScript array.",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist/"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SemperFortis/Google-Sheets-Parser.git"
+    },
+    "keywords": [
+        "google-sheets",
+        "google-sheets-to-array",
+        "google-sheets-parser"
+    ],
+    "author": "SemperFortis",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SemperFortis/Google-Sheets-Parser/issues"
+    },
+    "homepage": "https://github.com/SemperFortis/Google-Sheets-Parser/#readme",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "scripts": {
+        "build": "tsc",
+        "deploy": "npm run build && npm run start",
+        "dev": "ts-node src/index.ts",
+        "eslint": "eslint --fix . --ext ts",
+        "start": "node ./dist/src/index.js",
+        "watch": "tsc -w",
+        "prepare": "npm run build",
+        "prettier": "prettier --write .",
+        "commit": "cz"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "googleapis": "^84.0.0",
+        "query-string": "^7.0.1",
+        "typescript": "^4.3.5"
+    },
+    "devDependencies": {
+        "@commitlint/config-conventional": "^13.1.0",
+        "@types/node": "^16.6.1",
+        "@typescript-eslint/eslint-plugin": "^4.28.5",
+        "@typescript-eslint/parser": "^4.28.5",
+        "commitlint": "^13.1.0",
+        "cz-conventional-changelog": "3.3.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^7.0.1",
+        "prettier": "^2.3.2",
+        "ts-node": "^10.1.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
